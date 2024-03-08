@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for character set and viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the ToDoApp -->
     <title>ToDoApp</title>
+    
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- External script for JavaScript functionality with defer attribute -->
     <script src="scripts.js" defer type="module"></script>
 </head>
 <body>
+    <!-- Main container for the ToDoApp -->
     <div class="container">
         <div class="todo-app">
+            <!-- Heading for the ToDo List with an icon -->
             <h2>To-Do List <img src="images/icon.png"></h2>
+            
+            <!-- Form for adding new tasks -->
             <form>
-            <div class="row">
-                <input type="text" id="input-box" placeholder="Add your text">
-                <button id="addTaskButton">Add</button>
-            </div>
-        </form>
+                <div class="row">
+                    <!-- Input box for entering task text -->
+                    <input type="text" id="input-box" placeholder="Add your text">
+                    
+                    <!-- Button to add a new task -->
+                    <button id="addTaskButton">Add</button>
+                </div>
+            </form>
 
+            <!-- List container for displaying tasks -->
             <ul id="list-container">
+                <!-- Placeholder list items (commented out) -->
                 <!-- <li class="checked">Task 1</li>
                 <li>Task 2</li>
                 <li>Task 3</li> -->
             </ul>
         </div>
-   </div> 
+    </div> 
 </body>
 </html>
