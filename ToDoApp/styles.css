@@ -1,114 +1,134 @@
+/* Resetting default margin and padding to 0 */
 *{
     margin: 0;
     padding: 0;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box; /* Including padding and border in the element's total width and height */
 }
 
+/* Styling for the container */
 .container{
     width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #153677, #4e085f);
-    padding: 10px;
+    min-height: 100vh; /* Making sure the container takes at least the height of the viewport */
+    background: linear-gradient(135deg, #153677, #4e085f); /* Background gradient */
+    padding: 10px; /* Adding padding to the container */
 }
+
+/* Styling for the todo app */
 .todo-app{
     width: 100%;
-    max-width: 540px;
-    background: #fff;
-    margin: 100px auto 20px;
-    padding: 40px 30px 70px;
-    border-radius: 10px;
-
+    max-width: 540px; /* Setting maximum width for the todo app */
+    background: #fff; /* White background */
+    margin: 100px auto 20px; /* Centering the todo app vertically and giving margin */
+    padding: 40px 30px 70px; /* Padding for the todo app */
+    border-radius: 10px; /* Adding border radius */
 }
+
+/* Styling for the todo app title */
 .todo-app h2{
-    color: #002765;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-
+    color: #002765; /* Setting text color */
+    display: flex; /* Using flexbox for layout */
+    align-items: center; /* Aligning items vertically */
+    margin-bottom: 20px; /* Adding margin at the bottom */
 }
+
+/* Styling for the todo app title image */
 .todo-app h2 img{
-    width: 30px;
-    margin-left: 10px;
-
+    width: 30px; /* Setting image width */
+    margin-left: 10px; /* Adding margin to the left of the image */
 }
+
+/* Styling for each todo item row */
 .row{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #edeef0;
-    border-radius: 30px;
-    padding-left: 20px;
-    margin-bottom: 25px;
+    display: flex; /* Using flexbox for layout */
+    align-items: center; /* Aligning items vertically */
+    justify-content: space-between; /* Distributing space between items */
+    background: #edeef0; /* Background color */
+    border-radius: 30px; /* Adding border radius */
+    padding-left: 20px; /* Adding padding to the left */
+    margin-bottom: 25px; /* Adding margin at the bottom */
 }
+
+/* Styling for the input field */
 input{
-    flex: 1;
-    border: none;
-    outline: none;
-    background: transparent;
-    padding: 10px;
+    flex: 1; /* Setting input field to take remaining space */
+    border: none; /* Removing border */
+    outline: none; /* Removing outline */
+    background: transparent; /* Transparent background */
+    padding: 10px; /* Adding padding */
 }
+
+/* Styling for the button */
 button{
-    border: none;
-    outline: none;
-    padding: 16px 50px;
-    background: #ff5945 ;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 40px;
+    border: none; /* Removing border */
+    outline: none; /* Removing outline */
+    padding: 16px 50px; /* Adding padding */
+    background: #ff5945 ; /* Background color */
+    color: #fff; /* Text color */
+    font-size: 16px; /* Setting font size */
+    cursor: pointer; /* Changing cursor to pointer */
+    border-radius: 40px; /* Adding border radius */
 }
+
+/* Styling for the todo list items */
 ul li{
-    list-style: none;
-    font-size: 17px;
-    padding: 12px 8px 12px 50px;
-    user-select: none;
-    cursor: pointer;
-    position: relative;
+    list-style: none; /* Removing default list style */
+    font-size: 17px; /* Setting font size */
+    padding: 12px 8px 12px 50px; /* Adding padding */
+    user-select: none; /* Preventing user selection */
+    cursor: pointer; /* Changing cursor to pointer */
+    position: relative; /* Setting position to relative */
 }
+
+/* Styling for the unchecked todo list item */
 ul li::before{
-    content: '';
-    position: absolute;
-    height: 28px;
-    width: 28px;
-    border-radius: 50%;
-    background-image: url(images/unchecked.png);
-    background-size: cover;
-    background-position: center;
-    top: 12px;
-    left: 8px;
+    content: ''; /* Adding content */
+    position: absolute; /* Setting position to absolute */
+    height: 28px; /* Setting height */
+    width: 28px; /* Setting width */
+    border-radius: 50%; /* Adding border radius */
+    background-image: url(images/unchecked.png); /* Setting background image */
+    background-size: cover; /* Setting background size */
+    background-position: center; /* Setting background position */
+    top: 12px; /* Positioning from top */
+    left: 8px; /* Positioning from left */
 }
+
+/* Styling for checked todo list item */
 ul li.checked{
-    color: #908f8f;
-    text-decoration: line-through;
+    color: #908f8f; /* Setting text color */
+    text-decoration: line-through; /* Adding line-through text decoration */
 }
+
+/* Styling for the checked todo list item checkbox */
 ul li.checked::before{
-    content: '';
-    position: absolute;
-    height: 28px;
-    width: 28px;
-    border-radius: 50%;
-    background-image: url(images/checked.png);
-    background-size: cover;
-    background-position: center;
-    top: 12px;
-    left: 8px;
-
+    content: ''; /* Adding content */
+    position: absolute; /* Setting position to absolute */
+    height: 28px; /* Setting height */
+    width: 28px; /* Setting width */
+    border-radius: 50%; /* Adding border radius */
+    background-image: url(images/checked.png); /* Setting background image */
+    background-size: cover; /* Setting background size */
+    background-position: center; /* Setting background position */
+    top: 12px; /* Positioning from top */
+    left: 8px; /* Positioning from left */
 }
+
+/* Styling for the delete button */
 ul li span{
-    position: absolute;
-    right: 0;
-    top: 5px;
-    width: 40px;
-    height: 40px;
-    font-size: 22px;
-    color:#555 ;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 50%;
-
+    position: absolute; /* Setting position to absolute */
+    right: 0; /* Positioning from the right */
+    top: 5px; /* Positioning from the top */
+    width: 40px; /* Setting width */
+    height: 40px; /* Setting height */
+    font-size: 22px; /* Setting font size */
+    color: #555 ; /* Setting text color */
+    line-height: 40px; /* Setting line height */
+    text-align: center; /* Setting text alignment */
+    border-radius: 50%; /* Adding border radius */
 }
-ul li span:hover{
-    background: #edeef0;
 
+/* Hover effect for the delete button */
+ul li span:hover{
+    background: #edeef0; /* Changing background color on hover */
 }
